@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   Echo echo =  Echo({
   'broadcaster': 'socket.io',
   'client': IO.io,
-  'host' : 'http://8c268d37838e.ngrok.io',
+  'host' : 'http://f77f4ac30729.ngrok.io',
     //'host' : 'http://10.0.2.2:6001'
   });
 
@@ -43,8 +43,9 @@ class _HomeState extends State<Home> {
         });
       });
       setState(() {
+        id = echo.sockedId().toString();
         connect = true;
-        id = echo.sockedId();
+
       });
     }
     return Scaffold(
